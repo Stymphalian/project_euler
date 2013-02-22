@@ -6,7 +6,7 @@ set "src=src"
 set "incl=-Iinclude"
 set "lib="
 
-set "objects=main.o"
+set "objects=main.o convertNumToStr.o"
 set "target=noin"
 
 if "%1" equ "-g" set "CCflags=%CCflags% -g"
@@ -16,6 +16,7 @@ del *.o 2> nul
 del *.exe 2> nul
 
 
+%CC% %CCflags% -c convertNumToStr.c %incl%
 %CC% %CCflags% -c main.c %incl%
 %CC% -o %target% %objects% %lib%
 

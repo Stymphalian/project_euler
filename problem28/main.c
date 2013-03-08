@@ -9,7 +9,7 @@ int main() {
 
 	int width = 1001;
 	int rs = solve(width);
-	printf("solve() = %d\n", rs);
+	printf("solve(%d) = %d\n", width,rs);
 
 	printf("sys (%5f s)\n",(double)(clock() - time)/CLOCKS_PER_SEC);
 	return 0;
@@ -27,9 +27,6 @@ int solve(int width){
 	int count =0;
 	for ( i = 3 ; i <= limit; i+=step ){
 		sum += i;	
-		printf("%d\n", i);
-
-
 		++count;	
 		if(count%4 == 0 ){
 			count = 0;

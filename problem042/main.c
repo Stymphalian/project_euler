@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <math.h>
 #include "takamina.h"
 
 
@@ -65,6 +66,10 @@ int isTriangularWord_word(char* word){
 }
 
 int isTriangularWord_value(int value){
+	/*double num = sqrt(8*value +1);
+	return floor(num) == ceil(num);*/
+
+
 	int i;
 	int fn =0;
 

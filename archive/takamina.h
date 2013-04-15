@@ -38,7 +38,13 @@ int LIBN(permutations) (int* set, int setlen, int permlen, void* obj,
 int LIBN(subsets) (int* set, int setlen,void* obj,
 				   int (*callback) (int* set,int len,void* obj));
 
+/*  combinations.c */
+int LIBN(combinations) (int* set, int setlen, int comlen, void* obj,
+					int (*callback) (int* set, int setlen, void* obj));
+
+
 /* split_line.c */
 char** LIBN(split_line)(char* line, int* array_len, char* split_chars);
+
 
 #endif
